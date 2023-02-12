@@ -41,6 +41,11 @@ public class DZ4 {
                 x12num = Integer.parseInt(num1Str.charAt(1) + "");
                 x12 = true;
             }
+        } else {
+            x12 = x11;
+            x12num = x11num;
+            x11 = true;
+            x11num = 0;
         }
         // второе число
         if (Character.isDigit(num2Str.charAt(0))) {
@@ -52,17 +57,26 @@ public class DZ4 {
                 x22num = Integer.parseInt(num2Str.charAt(1) + "");
                 x22 = true;
             }
+        } else {
+            x22 = x21;
+            x22num = x21num;
+            x21 = true;
+            x21num = 0;
         }
         // третье число
         if (Character.isDigit(num3Str.charAt(0))) {
             x31num = Integer.parseInt(num3Str.charAt(0) + "");
-            x31 = true;
-        }
+            x31 = true;}
         if (num3Str.length() == 2) {
             if (Character.isDigit(num3Str.charAt(1))) {
                 x32num = Integer.parseInt(num3Str.charAt(1) + "");
                 x32 = true;
             }
+        } else {
+            x32 = x31;
+            x32num = x31num;
+            x31 = true;
+            x31num = 0;
         }
 
         // 4 часть - перебор всех вариантов цифр-разрядов
