@@ -1,11 +1,11 @@
-package Lection_1;
+package Lesson_01;
 
 import java.util.Scanner;
 
 /**
  * Hello world
  */
-public class Hello_World {
+public class Hello_world {
     public static void main(String[] args) {
         short age = 10;
         int salary = 123456;
@@ -97,7 +97,7 @@ public class Hello_World {
 
         // Получение данных из терминала - СТРОКИ
         Scanner iScanner = new Scanner(System.in);
-        System.out.printf("name: ");
+        System.out.printf("name: ", "cp866"); // "cp866" - ПОДДЕРЖКА РУССКОГО ВВОДА
         String name = iScanner.nextLine();
         System.out.printf("Привет, %s!\n", name);
         System.out.println(name);
@@ -124,9 +124,60 @@ public class Hello_World {
         }
 
         iScanner.close();
- 
+
+        // ФОРМАТИРОВАННЫЙ ВЫВОД
+        int a3 = 1, b3 = 2;
+        int c = a3 + b3;
+        String res = a3 + " + " + b3 + " = " + c;
+        System.out.println(res);
+
+        int a4 = 1, b4 = 2;
+        int c2 = a4 + b4;
+        String res2 = String.format("%d + %d = %d \n", a4, b4, c2);
+        System.out.printf("%d + %d = %d \n", a4, b4, c2);
+        System.out.println(res2);
+
+        // ВИДЫ СПЕЦИФИКАТОРОВ
+        // %d: целочисленных значений
+        // %x: для вывода шестнадцатеричных чисел
+        // %f: для вывода чисел с плавающей точкой
+        // %e: для вывода чисел в экспоненциальной форме, 
+        // например, 3.1415e+01
+        // %c: для вывода одиночного символа
+        // %s: для вывода строковых значений
+
+        System.out.printf("%f\n", pi);    // 3,141500
+        System.out.printf("%.2f\n", pi);  // 3,14
+        System.out.printf("%.3f\n", pi);  // 3,141
+        System.out.printf("%e\n", pi);    // 3,141500e+00
+        System.out.printf("%.2e\n", pi);  // 3,14e+00
+        System.out.printf("%.3e\n", pi);  // 3,141e+00
+
+        // Управляющие конструкции: условный оператор
+        int a5 = 1;
+        int b5 = 2;
+        int c5;
+        if (a5 > b5) {
+            c5 = a5;
+        } else {
+            c5 = b5;
+        }
+        System.out.println(c5);
+
+        // или
+        c5 = 0;
+        if (a5 > c5) c5 = a5;
+        if (b5 > a5) c5 = b5;
+        System.out.println(c5);
+
+        // ИЛИ
+        int min = a5 < b5 ? a5 : b5;
+        System.out.println(min);
+
+
     }
 
+    // ФУНКЦИИ
     static String getType(Object o) {
         return o.getClass().getSimpleName();
     }
