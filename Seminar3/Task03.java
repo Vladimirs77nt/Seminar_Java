@@ -5,6 +5,8 @@
 package Seminar3;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 public class Task03 {
     public static void main(String[] args) {
@@ -20,8 +22,9 @@ public class Task03 {
 
         for (int i = 0; i < array.size(); i++) {
             if (array.get(i) instanceof Integer){
+                System.out.println(i);
             array.remove(i);
-            i--;
+            i--;l
             }
         }
 
@@ -50,4 +53,5 @@ public class Task03 {
         }
         System.out.println(array);
     } */
+    }
 }

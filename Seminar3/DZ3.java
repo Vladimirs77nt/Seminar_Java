@@ -24,7 +24,7 @@ public class DZ3 {
                 min = numbers.get(i);
             arithmeticMean += numbers.get(i);
         }
-        arithmeticMean += arithmeticMean / numbers.size();
+        arithmeticMean = arithmeticMean / numbers.size();
         System.out.println("Минимальное число: " + min);
         System.out.println("Максимальное число: " + max);
         System.out.println("Среднее арифметическое: " + arithmeticMean);
