@@ -4,25 +4,23 @@
 package Seminar5;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
 public class DZ1 {
+    static Map<String, ArrayList<String>> telephoneBook = new HashMap<>();
     public static void main(String[] args) {
-        Map<String, ArrayList<Long>> telephoneBook = new HashMap<>();
-        ArrayList<Long> phone = new ArrayList<>();
-        String name;
-        name = "Иванов";
-        phone.add(89521234567);
-        phone.add(123);
-        phone.add(38578753);
-        telephoneBook.put("Иванов", phone);
+        telephoneAdd("Иванов", "+7(912)1234567");
+        telephoneAdd("Иванов", "+7(982)4569871");
         System.out.println(telephoneBook);
-        phone = telephoneBook.get("Иванов");
+    }
 
-        phone.remove(0);
-        telephoneBook.put("Иванов", phone);
-        System.out.println(telephoneBook);
+    private static void telephoneAdd(String name, String telephoneNumber) {
+        ArrayList<String> phone = new ArrayList<>();
+        if (telephoneBook.containsKey(name))
+            phone = telephoneBook.get(name);
+        phone.add(telephoneNumber);
+        System.out.println(phone);
+        telephoneBook.put(name, phone);
     }
 }
