@@ -42,12 +42,11 @@ public class NotebookShop {
                 8, 256, "Eshell", "серебристый", 42890f));
 
         System.out.println("Ноутбуки в магазине:");
-        printNotebook(notebooks);
-
-        interfaceCriteria(notebooks);
-
+        printNotebook(notebooks);       // вывод списка ноутбуков
+        interfaceCriteria(notebooks);   // вызов интерфейса выбора критериев и параметров
     }
 
+    // функция получения множества ноутбуков проходящих по заданным критериям (RAM, ROM, ОС, цвет)
     private static Set<Notebook> searhByParameters(Set<Notebook> notebooks, int ram, int rom, String os, String color) {
         Set<Notebook> notebooksSuitable = new HashSet<>();
         for (Notebook notebook : notebooks)
@@ -125,7 +124,7 @@ public class NotebookShop {
         } while (true);
     }
 
-    // интерфейс выбора КРИТЕРИЯ
+    // функция печати списка ноутбуков
     private static void printNotebook(Set<Notebook> notebooks) {
         for (Notebook notebook : notebooks)
             System.out.println(" > " + notebook);
