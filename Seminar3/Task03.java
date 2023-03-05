@@ -24,7 +24,7 @@ public class Task03 {
             if (array.get(i) instanceof Integer){
                 System.out.println(i);
             array.remove(i);
-            i--;l
+            i--;
             }
         }
 
